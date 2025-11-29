@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.app-bar {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--appbar-height);
+    z-index: 2;
+    height: max-content;
+
+    a {
+        text-decoration: none;
+        font-family: var(--font-family);
+    }
+
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 25px;
+        height: 40px;
+        width: 40px;
+        border: 2px solid var(--main-color);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 20px;
+        background-color: var(--primary-color);
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .nav-bar {
+        flex: 3;
+        background-color: var(--background-color);
+        box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.70);
+        border-radius: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 750px;
+        min-width: 560px;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 10px;
+
+        div {
+            display: none;
+            padding-top: 10px;
+            border-top: 1px solid var(--subtitle-color);
+        }
+
+        .btn {
+            height: 80%;
+            border-radius: 50px;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: var(--link-color);
+            background-color: transparent;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: black;
+            }
+        }
+
+        .active {
+            background-color: var(--primary-color);
+            color: black;
+        }
+    }
+
+    .contact {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+
+        svg {
+            color: var(--subtitle-color);
+            width: 2vw;
+            min-width: 25px;
+            margin-left: 10px;
+
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+    }
+
+    .menuToggle.active {
+        transition: 0.2s;
+        background-image: url('../../assets/icons/close.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-origin: center;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .app-bar {
+        display: flex;
+        align-items: flex-start;
+        height: max-content;
+        width: 100%;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            font-family: var(--font-family);
+        }
+
+
+        .nav-bar {
+            transition: 0.5s;
+            display: none;
+            height: max-content;
+            min-width: max-content;
+            position: absolute;
+            top: var(--appbar-height);
+            right: 0px;
+            border-radius: 0;
+            border: 0;
+            box-shadow: 0px 4px 5px rgba(255, 255, 255, 0.3);
+            border-radius: 0px 0px 20px 20px;
+
+            div {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+
+                a {
+                    color: var(--subtitle-color);
+                    transition: 0.2ms;
+
+                    &:hover {
+                        transition: 0.2s;
+                        color: var(--main-color);
+                    }
+                }
+            }
+
+            .btn {
+                width: 100%;
+                border-radius: 0;
+                justify-content: start;
+
+                svg {
+                    display: none;
+                }
+            }
+
+            .active {
+                background-color: var(--primary-color);
+                border-bottom: 1px solid white;
+                border-top: 1px solid white;
+                color: black;
+            }
+        }
+
+
+        .contact {
+            display: none;
+        }
+
+        .menuToggle {
+            margin-right: 15px;
+            transition: 0.2s;
+            width: 40px;
+            height: 25px;
+            background: url('../../assets/icons/menu.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            filter: var(--logo-color);
+        }
+
+        .nav-bar.active {
+            display: flex;
+            border-top: 2px solid var(--main-color);
+            flex-direction: column;
+            min-width: 100%;
+            padding: 0px 0px 20px 0px;
+
+            .btn {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            svg {
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}

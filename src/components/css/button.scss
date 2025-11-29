@@ -1,0 +1,34 @@
+    .myButton {
+        font-family: var(--subtitle-font-family);
+        background: var(--primary-color);
+        text-decoration: none;
+        font-size: 25px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        color: black;
+        padding: 0px 20px 0px 20px;
+
+        &:hover {
+            transition: 0.2s;
+            box-shadow: 0px 0px 10px var(--main-color);
+        }
+
+        .icon {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        span {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .myButton {
+            font-size: 20px;
+        }
+    }

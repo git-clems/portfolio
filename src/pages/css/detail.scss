@@ -1,0 +1,204 @@
+#detail-page {
+    padding-top: var(--page-padding-top);
+    padding-bottom: 50px;
+    background: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    color: var(--main-color);
+
+    .sec-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+        height: max-content;
+        transition: 0.2s;
+
+        .cl {
+            margin: 5px
+        }
+
+        .title-image {
+            min-width: 400px;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-size: calc(var(--title-font-size-large) - 10px);
+                text-align: center;
+            }
+
+            .image {
+                .img-targeted {
+                    width: 100%;
+                    height: max-content;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 10px var(--main-color);
+                }
+            }
+        }
+
+        .description-tools {
+            backdrop-filter: var(--blur-background);
+            text-align: justify;
+            width: 100%;
+            min-width: 300px;
+            color: var(--subtitle-color);
+            border: 1px solid var(--subtitle-color);
+            padding: 10px;
+            border-radius: 10px;
+            font-family: var(--subtitle-font-family);
+
+
+            .tools-list {
+
+                display: flex;
+                flex-wrap: wrap;
+
+                .tool {
+                    color: var(--subtitle-color);
+                    border: 1px solid var(--subtitle-color);
+                    padding: 5px;
+                    border-radius: 10px;
+                    transition: 0.2s;
+                    margin: 2px;
+                    text-wrap: nowrap;
+                }
+            }
+        }
+    }
+
+    .sec-2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+        .title {
+            width: 100%;
+            font-size: calc(var(--font-size-vmax) + .5vmax);
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-align: center;
+            transition: 0.2s;
+            color: var(--main-color);
+        }
+
+        div {
+            .list-step {
+                border: 1px solid var(--subtitle-color);
+                border-radius: 10px;
+                backdrop-filter:  blur(100px);;
+                width: 60vw;
+                transition: 0.2s;
+                padding: 15px;
+
+                .description {
+                    transition: 0.2s;
+                    text-align: justify;
+                    color: var(--subtitle-color);
+                    font-family: var(--subtitle-font-family);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #detail-page {
+        .sec-1 {
+            flex-direction: column;
+
+            .title-image {
+                min-width: 100%;
+                width: 80%;
+                margin-bottom: 25px;
+
+                .title {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .sec-1,
+        .sec-2 {
+            transition: 0.2s;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+
+        .sec-2 {
+            .title {
+                font-size: 23px;
+                transition: 0.2s;
+            }
+
+            div {
+                .list-step {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    #detail-page {
+
+        .sec-1,
+        .sec-2 {
+            .description {
+                transition: 0.2s;
+                font-size: 13px;
+            }
+
+            .tool {
+                transition: 0.2s;
+                font-size: 13px;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #detail-page {
+
+        .sec-1,
+        .sec-2 {
+            transition: 0.2s;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .sec-1 {
+            .title-image {
+
+                .title {
+                    transition: 0.2s;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,118 @@
+.hero {
+    transition: 0.2s;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .accroche {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 20px;
+
+        .me {
+            .cl-what {
+                font-size: 25px;
+                color: var(--subtitle-color);
+                text-align: center;
+            }
+
+            .cl-hi {
+                font-size: calc(var(--font-size-vmax) + 1vmax);
+                color: var(--main-color);
+                text-align: center;
+            }
+        }
+
+        .tools {
+            height: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-around;
+
+            div {
+                background-color: var(--primary-color);
+                color: black;
+                display: flex;
+                margin-left: 10px;
+                margin-right: 10px;
+                height: 100%;
+                align-items: center;
+                justify-content: space-evenly;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    .profile {
+        width: 300px;
+
+        img {
+            box-shadow: -2px 2px 5px var(--main-color);
+            border: 1px solid var(--main-color);
+            border-radius: 20px;
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .hero {
+        transition: 0.2s;
+        font-family: var(--font-family);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .accroche {
+            margin-right: 0px;
+
+            .me {
+                display: flex;
+                flex-direction: column;
+
+                .cl-what {
+                    font-size: 17px;
+                }
+
+                .cl-hi {
+                    font-size: var(--title-font-size-small);
+                }
+            }
+
+
+            .tools {
+
+                div {
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .profile {
+        img {
+            width: 300px;
+        }
+    }
+}

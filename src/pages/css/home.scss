@@ -1,0 +1,127 @@
+#home-page {
+    padding-top: var(--page-padding-top);
+    padding-bottom: 50px;
+    background: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    color: var(--main-color);
+
+    .l2 {
+        transition: 0.2s;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        border: 1px solid var(--subtitle-color);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .l3 {
+        transition: 0.2s;
+        padding: 20px;
+
+        .title {
+            font-size: var(--title-font-size-large);
+            font-family: var(--font-family);
+            display: flex;
+            margin-bottom: 20px;
+            align-items: baseline;
+            justify-content: space-between;
+
+        }
+
+        .see-more-bottom {
+            display: none;
+        }
+
+        .home-project-display {
+            transition: 0.2s;
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            border-radius: 15px;
+
+            .project-container {
+                margin: 5px;
+            }
+        }
+    }
+
+    .l4 {
+        border-top: 1px solid var(--subtitle-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .myButton {
+            max-width: 500px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #home-page {
+        .l2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .l3 {
+            .title {
+                font-size: var(--title-font-size-small);
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    #home-page {
+        .l2 {
+            display: flex;
+            flex-direction: column;
+            transition: 0.2s;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .l3 {
+            .title {
+                font-size: var(--title-font-size-small);
+
+                .see-more-top {
+                    display: none;
+                }
+            }
+
+            .see-more-bottom {
+                display: block;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+
+
+                .myButton {
+                    width: 70%;
+                    font-size: 20px;
+                }
+            }
+
+            .home-project-display {
+                transition: 0.2s;
+                flex-direction: column;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.domain-container {
+    margin: 10px;
+
+    .domain-title {
+        font-family: var(--font-family);
+        color: var(--main-color);
+        font-size: 2.5vmax;
+    }
+
+    .domain-descript {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+        color: var(--subtitle-color);
+        margin-top: 5px;
+        text-align: justify;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    .domain-container {
+        .domain-title {
+            font-size: var(--title-font-size-small);
+        }
+        .domain-descript {
+            font-size: 13px;
+        }
+    }
+}

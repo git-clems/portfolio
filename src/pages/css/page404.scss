@@ -1,0 +1,25 @@
+#error404 {
+    background: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    padding-top: var(--page-padding-top);
+
+    .content {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-height: 30vh;
+            object-fit: contain;
+        }
+    }
+}

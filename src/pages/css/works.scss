@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Roboto+Condensed:wght@700&display=swap');
+
+#works-page {
+    padding-top: var(--page-padding-top);
+    padding-bottom: 50px;
+    background: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    color: var(--main-color);
+
+    .accroche {
+
+        .title {
+            transition: 0.2s;
+            text-align: center;
+            font-size: var(--title-font-size-large);
+        }
+
+        .message {
+            transition: 0.2s;
+            font-size: 25px;
+            text-align: center;
+            color: var(--subtitle-color);
+        }
+    }
+
+
+    .works {
+        transition: 0.2s;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .project-container {
+            margin: 20px;
+        }
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    #works-page {
+        .accroche {
+            .title {
+                transition: 0.2s;
+                font-size: var(--title-font-size-small);
+            }
+
+            .message {
+                transition: 0.2s;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 20px;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    #works-page {
+        .accroche {
+
+            .message {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #works-page {
+        .accroche {
+
+            .message {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .works {
+            transition: 0.2s;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Roboto+Condensed:wght@700&display=swap');
+
+:root .light {
+    --background-image: rgb(255, 255, 255);
+    --logo-color : invert(1);
+
+    --main-color: black;
+    --reverse-color: white;
+    --subtitle-color: #525252;
+
+    --blur-background: blur(100px);
+
+    --font-family: 'Roboto Condensed', sans-serif;
+    --subtitle-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    --title-font-size-large: 40px;
+    --title-font-size-small: 25px;
+
+    --logo-size: 20px;
+
+    --appbar-height: 70px;
+    --page-padding-top: calc(var(--appbar-height) + 50px);
+
+    --font-size-vmax: 2vmax
+}
+
+
+
+:root {
+    --background-image: black;
+
+    --background-color: rgb(9, 2, 17);
+
+    
+    --primary-color: rgb(36, 241, 29);
+
+    --main-color: white;
+    --reverse-color: black;
+    --link-color: #a7adcc;
+    --subtitle-color: #a7adcc;
+
+    --blur-background: blur(100px);
+
+    --font-family: 'Roboto Condensed', sans-serif;
+    --subtitle-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    --title-font-size-large: 40px;
+    --title-font-size-small: 25px;
+
+    --logo-size: 20px;
+
+    --appbar-height: 70px;
+    --page-padding-top: calc(var(--appbar-height) + 50px);
+
+    --font-size-vmax: 2vmax
+}
