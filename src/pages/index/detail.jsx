@@ -1,17 +1,34 @@
 import { useParams } from "react-router-dom";
 import { PreloadImages } from "../../components/loading"
-import { projects } from "../../data/dataSet"
+// import { projects } from "../../data/dataSet"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListCheck, faLocationDot, faCalendarPlus } from "@fortawesome/free-solid-svg-icons";
 import "../css/detail.scss"
 import { removeMenu } from "../../components/appBar";
 import Page404 from "./page404";
+import { useEffect, useState } from "react";
+import { collection, doc, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebase_file";
 
 function Detail() {
     let params = useParams()
+    
+    const [works, setWorks] = useState([]);
+    useEffect(() => {
+        const unsub = onSnapshot(collection(db, "works"), snapshot => {
+            setWorks(snapshot.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
+        })));
+    });
 
-    // eslint-disable-next-line eqeqeq
-    const selectedProject = projects.find((p) => p.id == params.id)
+    console.log("Details")
+    // alert("vdfed")
+    // console.log(works)
+    return () => unsub();
+    }, []);
+
+    const selectedProject = works.find((p) => p.id == params.id)
     function ImageSize() {
         const img = document.querySelector('.img-targeted')
         if (img.clientHeight > img.clientWidth) {
@@ -43,7 +60,7 @@ function Detail() {
                                                 <p style={{ fontSize: 13, color: "var(--subtitle-color)" }}>
                                                     <FontAwesomeIcon icon={faLocationDot} style={{ marginRight: 5 }} /> {selectedProject.location}
                                                     <br />
-                                                    <FontAwesomeIcon icon={faCalendarPlus} style={{ marginRight: 5 }} />{selectedProject.period}
+                                                    <FontAwesomeIcon icon={faCalendarPlus} style={{ marginRight: 5 }} />{selectedProject.startMonth} {selectedProject.startYear} - {selectedProject.endMonth} {selectedProject.endYear}
                                                 </p>
                                                 : null
                                         }
@@ -56,7 +73,7 @@ function Detail() {
                                             {
                                                 selectedProject.tools?.map((tool) => {
                                                     return (
-                                                        <span className="tool" >{tool.keyword}</span>
+                                                        <span className="tool" >{tool}</span>
                                                     )
                                                 })
                                             }
@@ -72,14 +89,21 @@ function Detail() {
                                     <div style={{ display: "flex", justifyContent: "center" }}>
                                         <div className="list-step">
                                             {
-                                                selectedProject.steps?.map((step) => {
-                                                    return (
-                                                        <>
-                                                            <span className="step">Phase {step.id}: {step.step}</span>
-                                                            <p className="description">{step.description}</p>
-                                                        </>
-                                                    )
-                                                })
+                                                // selectedProject.steps?.sort((a,b)=> a.position-b.position).map((step) => {
+                                                //     return (
+                                                //         <>
+                                                //             <span className="step">Phase {step.position}: {step.step}</span>
+                                                //             <p className="description">{step.description}</p>
+                                                //         </>
+                                                //     )
+                                                // })
+
+                                                selectedProject.steps?.sort((a,b) => a.position-b.position).map((step) => (
+                                                    <>
+                                                    <span className="step">Phase {step.position}: {step.step}</span> 
+                                                    <p className="description">{step.description}</p>
+                                                    </>
+                                                ))
                                             }
                                         </div>
                                     </div>

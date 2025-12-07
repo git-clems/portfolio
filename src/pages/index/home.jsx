@@ -1,7 +1,7 @@
 import Hero from "../../components/hero"
 import { PreloadImages } from "../../components/loading"
 import "../css/home.scss"
-import { person, projects, domains } from "../../data/dataSet"
+// import { projects, domains } from "../../data/dataSet"
 import Project from "../../components/project"
 import Button from "../../components/button"
 import { faArrowRight, faPaperPlane } from "@fortawesome/free-solid-svg-icons"
@@ -16,54 +16,68 @@ import { useEffect, useState } from "react";
 
 
 function Home() {
-
     const [users, setUsers] = useState([]);
-//     useEffect(() => {
-//         async function loadUsers() {
-//         const querySnapshot = await onSnapshot(collection(db, "users"));
-//         const list = querySnapshot.docs.map(doc => ({
-//             id: doc.id,
-//             ...doc.data()
-//         }));
-//         setUsers(list);
-//         console.log(users)
-//     }
+    const [works, setWorks] = useState([]);
+    const [domains, setDomains] = useState([]);
 
-//     loadUsers();
-//   }, [users]);
-
-  useEffect(() => {
-    const unsub = onSnapshot(collection(db, "users"), snapshot => {
-        setUsers(snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data()
+    useEffect(() => {
+        const unsub = onSnapshot(collection(db, "users"), snapshot => {
+            setUsers(snapshot.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
         })));
+
+        async function LoadWorks(){
+            const querry = await getDocs(collection(db,"works"));
+            const data = querry.docs.map((doc) => ({
+                id:doc.id,
+                ...doc.data()
+            }));
+            setWorks(data)
+        }
+
+        LoadWorks()
     });
 
     return () => unsub();
     // console.log(uns)
     }, []);
 
+    useEffect(()=> {
+        async function LoadDomain() {
+            const querry = await getDocs(collection(db,"domain"));
+            const data = querry.docs.map(doc => ({
+                id:doc.id,
+                ...doc.data()
+            }))
+
+            setDomains(data)
+        }
+        LoadDomain()
+    },[])
+
     return (
         <PreloadImages>
             <div id="home-page" onClick={removeMenu} onLoad={removeMenu}>
                 <section className="l1">
-                    {/* <Hero name={person.fName} description={person.description} profile={person.profile[0]}></Hero> */}
                     {
                         users.map(user => (
-                            <Hero key = {`${user.id}`} name={`${user.name}`} description={user.description} profile={person.profile[0]}></Hero>
+                            <Hero key = {`${user.id}`} name={`${user.name}`} description={user.description} profile={user.profil}></Hero>
                         ))
                     }
                 </section>
+
                 <section className="l2">
-                    {domains.map((domain) => { return (<Domain id={domain.id} title={domain.title} description={domain.description} ></Domain>) })}
+                    {
+                        domains.map((domain) => { return (<Domain title={domain.title} description={domain.description} ></Domain>) })
+                    }
                 </section>
                 <section className="l3">
                     <span className="title">Mes réalisations
                         <div className="see-more-top"><Button title={"Voir plus"} icon={faArrowRight} to={"./work"}></Button></div>
                     </span>
                     <div className="home-project-display">
-                        {<Project projects={projects} lenght={projects.length >= 2 ? 2 : projects.length}></Project>}
+                        {<Project projects={works} lenght={works.length >= 2 ? 2 : works.length}></Project>}
                     </div>
                     <div className="see-more-bottom"><Button title={"Voir plus"} icon={faArrowRight} to={"./work"}></Button></div>
                 </section>
