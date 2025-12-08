@@ -1,16 +1,15 @@
 import { PreloadImages } from "../../components/loading"
-// import { projects } from "../../data/dataSet"
 import "../css/works.scss"
 import Project from "../../components/project"
 import { removeMenu } from "../../components/appBar"
 import { useEffect, useState } from "react"
-import { collection, doc, getDocs } from "firebase/firestore"
+import { collection, getDocs } from "firebase/firestore"
 import { db } from "../../firebase_file"
 
 
 function Works(props) {
 
-    const [works, setWorks] = useState(null)
+    const [works, setWorks] = useState([])
 
     useEffect(()=>{
         async function LoadWork() {

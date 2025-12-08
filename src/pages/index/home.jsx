@@ -1,7 +1,6 @@
 import Hero from "../../components/hero"
 import { PreloadImages } from "../../components/loading"
 import "../css/home.scss"
-// import { projects, domains } from "../../data/dataSet"
 import Project from "../../components/project"
 import Button from "../../components/button"
 import { faArrowRight, faPaperPlane } from "@fortawesome/free-solid-svg-icons"
@@ -37,23 +36,21 @@ function Home() {
         }
 
         LoadWorks()
+
+        // console.log(works)
     });
 
     return () => unsub();
-    // console.log(uns)
     }, []);
 
     useEffect(()=> {
-        async function LoadDomain() {
-            const querry = await getDocs(collection(db,"domain"));
-            const data = querry.docs.map(doc => ({
+        const LoadDomain = onSnapshot(collection(db,"domain"), snapshot => {
+            setDomains(snapshot.docs.map(doc=>({
                 id:doc.id,
                 ...doc.data()
-            }))
-
-            setDomains(data)
-        }
-        LoadDomain()
+            })))
+        });
+        return() => LoadDomain()
     },[])
 
     return (
@@ -62,14 +59,14 @@ function Home() {
                 <section className="l1">
                     {
                         users.map(user => (
-                            <Hero key = {`${user.id}`} name={`${user.name}`} description={user.description} profile={user.profil}></Hero>
+                            <Hero name={`${user.name}`} description={user.description} profile={user.profil}></Hero>
                         ))
                     }
                 </section>
 
                 <section className="l2">
                     {
-                        domains.map((domain) => { return (<Domain title={domain.title} description={domain.description} ></Domain>) })
+                        domains.sort((a,b) => a.position - b.position).map((domain) => { return (<Domain position={domain.position} title={domain.title} description={domain.description} ></Domain>) })
                     }
                 </section>
                 <section className="l3">
