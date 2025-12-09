@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
 import { imgUrl } from "../data/dataSet";
 
-export const PreloadImages = ({ children }) => {
+export const PreloadImages = ({ children }, link) => {
     const [imagesLoaded, setImagesLoaded] = useState(false);
 
     useEffect(() => {

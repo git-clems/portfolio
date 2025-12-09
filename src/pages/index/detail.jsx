@@ -7,7 +7,7 @@ import "../css/detail.scss"
 import { removeMenu } from "../../components/appBar";
 import Page404 from "./page404";
 import { useEffect, useState } from "react";
-import { collection, doc, onSnapshot } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase_file";
 
 function Detail() {
@@ -23,12 +23,10 @@ function Detail() {
     });
 
     console.log("Details")
-    // alert("vdfed")
-    // console.log(works)
     return () => unsub();
     }, []);
 
-    const selectedProject = works.find((p) => p.id == params.id)
+    const selectedProject = works.find((p) => p.id === params.id)
     function ImageSize() {
         const img = document.querySelector('.img-targeted')
         if (img.clientHeight > img.clientWidth) {
@@ -89,15 +87,6 @@ function Detail() {
                                     <div style={{ display: "flex", justifyContent: "center" }}>
                                         <div className="list-step">
                                             {
-                                                // selectedProject.steps?.sort((a,b)=> a.position-b.position).map((step) => {
-                                                //     return (
-                                                //         <>
-                                                //             <span className="step">Phase {step.position}: {step.step}</span>
-                                                //             <p className="description">{step.description}</p>
-                                                //         </>
-                                                //     )
-                                                // })
-
                                                 selectedProject.steps?.sort((a,b) => a.position-b.position).map((step) => (
                                                     <>
                                                     <span className="step">Phase {step.position}: {step.step}</span> 

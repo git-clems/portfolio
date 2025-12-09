@@ -74,7 +74,7 @@ function Home() {
                         <div className="see-more-top"><Button title={"Voir plus"} icon={faArrowRight} to={"./work"}></Button></div>
                     </span>
                     <div className="home-project-display">
-                        {<Project projects={works} lenght={works.length >= 2 ? 2 : works.length}></Project>}
+                        {<Project projects={works} length={works.length >= 2 ? 2 : works.length}></Project>}
                     </div>
                     <div className="see-more-bottom"><Button title={"Voir plus"} icon={faArrowRight} to={"./work"}></Button></div>
                 </section>

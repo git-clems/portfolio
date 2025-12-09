@@ -32,7 +32,7 @@ function Works(props) {
                     <p className="message">Consultez mes projets les plus récents ci-dessous pour avoir une idée de mon expérience.</p>
                 </section>
                 <section className="works">
-                    <Project projects = {works} lenght = {works.length}></Project>
+                    <Project projects = {works} length = {works.length}></Project>
                 </section>
             </div>
         </PreloadImages>

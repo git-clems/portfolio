@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
 import "./css/appBar.scss"
 import { useEffect } from 'react';
