@@ -1,0 +1,33 @@
+[
+    {
+      "id": "T6HcspfG0UfS9ToBmO8C",
+      "location": "Rabat, Morocco",
+      "startDate": "2021",
+      "endDate": "2024",
+      "diploma": "Engineering degree in Smart Supply Chain and Logistics",
+      "tools": [
+        "ERP",
+        "Supply chain",
+        "Warehouse management",
+        "Web/App dev",
+        "Lean six sigma",
+        "Statistical Process Control"
+      ],
+      "description": "Specialized in Smart Supply Chain and Logistics, with a strong focus on logistics management and the role of Business Intelligence and decision-support systems in supply chain performance. The program provided solid expertise in operations research and logistics optimization, including mathematical modeling, optimization methods, heuristic and metaheuristic approaches, as well as the application of Artificial Intelligence techniques to complex supply chain challenges.",
+      "school": "National School of Computer Science and Systems Analysis (ENSIAS)"
+    },
+    {
+      "id": "nUhHZBueyzbVKBjyiQnY",
+      "diploma": "Mathematics - Computer science - Physics",
+      "location": "Mohammedia, Morocco",
+      "startDate": "2019",
+      "endDate": "2021",
+      "tools": [
+        "Algrbra",
+        "Classical mechanics",
+        "Algorithmic"
+      ],
+      "description": "Developed a strong foundation in mathematics, computer science, and physics, with particular emphasis on numerical analysis, statistics, and algorithm design. This multidisciplinary background provided me with the ability to translate real-world challenges into mathematical models and solve them using analytical methods and computational algorithms.",
+      "school": "Faculty of Sciences and Technologies of Mohammedia (FSTM)"
+    }
+  ]

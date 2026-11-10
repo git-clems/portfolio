@@ -1,0 +1,55 @@
+.home-page {
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .description {
+            flex: 1;
+            // border: 2px solid var(--text-2);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+
+            .user-name {
+                font-size: 30px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-page {
+
+        header {
+
+            .description {
+                transition: 0.2s;
+                width: 100vw;
+
+
+                .user-name {
+                    transition: 0.2s;
+                }
+
+                .speciality-content {
+                    font-size: 14px;
+                    transition: 0.2s;
+                }
+
+            }
+
+            .profile {
+                width: 100vw;
+                margin: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

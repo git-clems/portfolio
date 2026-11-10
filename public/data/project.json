@@ -1,0 +1,13 @@
+[
+    {
+        "id" : "Mdjq5c3wMNClmvNkCqq7",
+        "company" : "CEOS Technology",
+        "description" : "To effectively monitor the performance of a business, dynamic dashboards seem particularly well-suited, as they provide both a broad overview and detailed insights.",
+        "endDate" : "2023",
+        "image" : "https://ik.imagekit.io/jqd5wt29x/portfolio/projects/ExpGlobale.ca13977f40800ee86f37.webp",
+        "location" : "Casablanca, Maroc",
+        "name" : "Last mile dashbord",
+        "startDate" : "2023",
+        "tools" : ["Laravel", "Ajax", "Chart JS"]
+    }
+]
