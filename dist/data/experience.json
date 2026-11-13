@@ -1,0 +1,89 @@
+[
+    {
+      "id": "P3O5cXGiM0wn1bsBMwcQ",
+      "title": "PhD student in logistics and operational research",
+      "startDate": "2024",
+      "organization": "Laboratoire de Génie Informatique, de Production et de Maintenance - University of Lorraine",
+      "location": "Metz, France",
+      "subject": "Integration of Blockchain in the Agricultural Supply Chain: Implications for Efficiency, Sustainability, and Finance",
+      "type": "PhD",
+      "logo": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/R.png",
+      "tools": [
+        "Operational research",
+        "Agri-food supply chain",
+        "Heuristics",
+        "Game theory",
+        "Reinforcement learning",
+        "Blockchain technology"
+      ],
+      "description": "My doctoral research focuses on the optimization of agricultural supply chains within an e-commerce context, leveraging blockchain technology to enhance transparency, traceability, efficiency, financial fairness, and environmental sustainability. The study addresses information asymmetry challenges in agri-food systems by proposing a blockchain-enabled supply chain architecture that secures transactions and improves trust among stakeholders.\n\nThe methodological framework combines game theory, robust optimization, and reinforcement learning to model multi-actor interactions, optimize logistics and financial performance, and enable adaptive decision-making. The research is validated through simulations and real-world data analysis, aiming to provide both theoretical contributions and practical solutions for sustainable and resilient agricultural supply chains.",
+      "team": [
+        {
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/cc6c29eeb440c35f826e6318adeb72096fbd0551.jpeg",
+          "name": "Dr. Mustapha OUDANI"
+        },
+        {
+          "name": "Dr. Amine BELHADI",
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/Amine-BELHADI-1.png"
+        },
+        {
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/S-Dellagi.webp",
+          "name": "Dr. Sofiene DELLAGI"
+        },
+        {
+          "name": "Dr. Zied Achour",
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/Zied-Achour.webp"
+        }
+      ]
+    },
+    {
+      "id": "VTABVc5TxtDchZjcuZNn",
+      "title": "Web developer and supply chain assistant",
+      "startDate": "Jul 2023",
+      "location": "Casablanca, Morocco",
+      "type": "Internship",
+      "organization": "Express Relai - CEOS Technology",
+      "tools": [
+        "Last mile delivery",
+        "KPI construction",
+        "Web Dashbord"
+      ],
+      "endDate": "Aug 2023",
+      "logo": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/Logo-1.png",
+      "team": [
+        {
+          "name": "CEOS Technology IT team",
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/Logo-1.png"
+        }
+      ],
+      "description": "Designed and implemented a Business Intelligence platform to support decision-making across the company's global supply chain. Responsibilities included gathering business requirements, defining KPI matrices, preparing and transforming data, designing fact and dimension data models, and developing interactive dashboards and reporting interfaces."
+    },
+    {
+      "id": "aO6rDb4uQj0PsTIFWccK",
+      "startDate": "Fev 2024",
+      "organization": "Rabat Business School - International University of Rabat",
+      "location": "Rabat, Morocco",
+      "endDate": "Jul 2024",
+      "title": "Operations Research Intern: Supply Chain - Blockchain",
+      "subject": "Reducing forced labour in agri-food supply chains in Africa: implication of Blockchain",
+      "type": "Internship",
+      "logo": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/mono-logo-uir-150x150.png",
+      "tools": [
+        "Operational research",
+        "MILP/MINLP",
+        "Heuristics",
+        "Social supply chain",
+        "Blockchain technology"
+      ],
+      "team": [
+        {
+          "name": "Dr. Mustapha OUDANI",
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/cc6c29eeb440c35f826e6318adeb72096fbd0551.jpeg"
+        },
+        {
+          "name": "Dr. Amine BELHADI",
+          "image": "https://ik.imagekit.io/jqd5wt29x/portfolio/Experiences/Amine-BELHADI-1.png"
+        }
+      ]
+    }
+  ]

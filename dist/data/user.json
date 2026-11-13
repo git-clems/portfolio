@@ -1,0 +1,15 @@
+{
+    "about" : "My name is Clément BAMOGO, and I am currently a PhD candidate in Logistics and Supply Chain Management at the Université de Lorraine. My research focuses on the optimization of agricultural transportation networks through a multidisciplinary approach that integrates operational efficiency, financial performance, environmental sustainability, and blockchain-enabled traceability. My academic journey began with studies in fundamental sciences at the Faculty of Sciences and Technologies of Mohammedia in Morocco, followed by an engineering degree in Smart Supply Chain and Logistics from the National School of Computer Science and Systems Analysis (ENSIAS), Rabat - Morocco. This combination of engineering, information systems, and supply chain management has enabled me to develop a holistic understanding of modern logistics challenges. Today, my work lies at the intersection of supply chain optimization, data analytics, sustainable logistics, digital transformation, and emerging technologies. Through my research, I aim to contribute to the design of resilient, efficient, and transparent agricultural supply chains that create value from both economic and environmental perspectives.",
+    "aboutImage" : "https://ik.imagekit.io/jqd5wt29x/portfolio/user/photo.jpg",
+    "adress": "3 rue Augustin Fresnel 57070 Metz, France",
+    "description" : "Supply chain and computer science engineer | PhD student at Lorraine University in operational research for agri-food supply chain: implications of Blockchain technology",
+    "email": "clement.bamogo@univ-lorraine.fr",
+    "fname" : "Clément",
+    "github" : "https://github.com/git-clems",
+    "image" : "/images/profile_1.jpeg",
+    "linkedin" : "https://www.linkedin.com/in/c-bamogo",
+    "lname" : "BAMOGO",
+    "location" : "https://www.google.com/maps/place/3+Rue+Augustin+Fresnel,+57070+Metz/@49.0950625,6.2261317,842m/data=!3m1!1e3!4m15!1m8!3m7!1s0x4794ddbf979d00ef:0x5cac1e5cab942171!2s3+Rue+Augustin+Fresnel,+57070+Metz!3b1!8m2!3d49.094724!4d6.2299117!16s%2Fg%2F11f3jw43_w!3m5!1s0x4794ddbf979d00ef:0x5cac1e5cab942171!8m2!3d49.094724!4d6.2299117!16s%2Fg%2F11f3jw43_w?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D",
+    "organization" : ["Laboratoire de Génie Informatique, de Production et de Maintenance - Université de Lorraine", "Laboratoire de Génie Informatique, de Production et de Maintenance - Université de Lorraine"],
+    "tel" : "+33 (6) 14 41 39 87"
+}

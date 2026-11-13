@@ -1,0 +1,23 @@
+[
+    {
+        "id" : "tqhJDSM82RaSeGHiKBlz",
+        "abstract" : "Agricultural production relies heavily on chemical fertilizers, which contribute significantly to greenhouse gas emissions. Transitioning to low-emission fertilizers (LEFs) may reduce these emissions but involves additional investment and operational costs. This paper studies fertilizer planning under a cap-and-trade carbon regulation that incentivizes the adoption of LEFs. We propose a two-stage stochastic mixed-integer linear programming model that determines the optimal timing and capacity of LEF installations and the corresponding production decisions, under demand, carbon emissions, and price uncertainties.  The first stage represents strategic investment decisions in LEF capacity, while the second stage determines production quantities using conventional (CF) or LEFs and the trading of carbon credits. To address the computational complexity of the problem, we develop a reinforcement learning–enhanced Variable Neighborhood Search (QL-VNS). Computational experiments on a set of benchmark instances show that the proposed approach yields high-quality solutions with average optimality gaps below 0.2%, while significantly reducing computational time compared with classical heuristics. A case study based on tea production in subtropical China illustrates how cap-and-trade mechanisms can make LEF systems economically viable, reduce emissions, and generate additional revenue through carbon credit trading. The results provide insights for policymakers and agricultural producers seeking cost-effective pathways toward low-emission farming.",
+        "authors" : [
+            {"affiliation" : "1,2", "firstAuthor" : true, "name" : "Clément BAMOGO"},
+            {"affiliation" : "3", "firstAuthor" : false, "name" : "Mustapha OUDANI"},
+            {"affiliation" : "2", "firstAuthor" : false, "name" : "Amine BELHADI"},
+            {"affiliation" : "1", "firstAuthor" : false, "name" : "Sofiene DELLAGI"},
+            {"affiliation" : "1", "firstAuthor" : false, "name" : "Zied ACHOUR"}
+        ],
+        "image" : "https://ik.imagekit.io/jqd5wt29x/portfolio/paper/Capture%20d_%C3%A9cran%202026-05-30%20150719.png",
+        "journal": "Journal of the Operational Research Society",
+        "keywords" : ["Agriculture","Fertilizer use", "Cap-and-trade", "Linear programming", "Variable Neighborhood Search", "Q-Learning"],
+        "link" : "https://www.tandfonline.com/doi/full/10.1080/01605682.2026.2691991",
+        "organization" : ["Laboratoire de Génie Informatique, de Production et de Maintenance, University of Lorraine, France", "Rabat Business School, International University of Rabat, Morocco", "College of Engineering and Architecture, International University of Rabat, Morocco"],
+        "publisher" : "Taylor & Francis",
+        "title" : "Fertilizer Planning Strategies Supporting Low-Emission Transitions in Regulated Agricultural Systems",
+        "type" : "Article",
+        "year" : "2026"
+
+    }
+]
